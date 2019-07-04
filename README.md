@@ -35,6 +35,7 @@ docker run --rm -ti -v ${HOME}/.kube/config:/root/.kube/config:ro chrisns/k8upda
  - [ ] Write some blooming tests, your not that devops @chrisns
  - [ ] Write a Helm chart, because cool kids like Helm ¯\_(ツ)_/¯ 
  - [ ] More proscriptive/limited cluster access
+ - [ ] Come up with a better name than k8update (suggestions welcome)
 
 ## Inspiration
  - [flux](https://github.com/weaveworks/flux) is an obvious comparision, I however didn't want to have to commit to their full gitops implementation for the sake of compliance.
