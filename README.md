@@ -1,6 +1,15 @@
 # K8 update
 > *Controversially pronounced 'kate-update'*
 
+[![GitHub issues](https://img.shields.io/github/issues/chrisns/k8update.svg)](https://github.com/chrisns/k8update/issues)
+[![GitHub forks](https://img.shields.io/github/forks/chrisns/k8update.svg)](https://github.com/chrisns/k8update/network)
+[![GitHub stars](https://img.shields.io/github/stars/chrisns/k8update.svg)](https://github.com/chrisns/k8update/stargazers)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/chrisns/k8update/master/LICENSE)
+[![Docker Stars](https://img.shields.io/docker/stars/chrisns/k8update.svg)](https://hub.docker.com/r/chrisns/k8update)
+[![Docker Pulls](https://img.shields.io/docker/pulls/chrisns/k8update.svg)](https://hub.docker.com/r/chrisns/k8update)
+[![](https://images.microbadger.com/badges/image/chrisns/k8update.svg)](https://microbadger.com/images/chrisns/k8update)
+[![](https://images.microbadger.com/badges/version/chrisns/k8update.svg)](https://microbadger.com/images/chrisns/k8update)
+
 This is a simple bit of code intended to check your kubernetes cluster for containers where the running `shasum` doesn't match what the registry reports.
 
 This might come about from legitimate scenarios such as the remote tag (e.g. `image:latest` or a semver style `image:1`) has been updated, or could be someone has poisoned the node's docker cache and could be running something wildly different to what you expect.
