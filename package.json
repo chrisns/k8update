@@ -10,7 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "@kubernetes/client-node": "^0.10.2",
-    "ws": "^7.0.1"
+    "ws": "^7.1.2"
   },
   "devDependencies": {
     "eslint": "^6.0.1",
