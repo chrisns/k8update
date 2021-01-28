@@ -1,4 +1,4 @@
-FROM node:15.6.0-alpine as builder
+FROM node:15.7.0-alpine as builder
 WORKDIR /app
 COPY package.json package-lock.json /app/
 RUN npm install
@@ -8,7 +8,7 @@ RUN npm prune --production
 RUN rm .eslintrc.js
 
 
-FROM node:15.6.0-alpine
+FROM node:15.7.0-alpine
 COPY --from=twistedvines/skopeo /usr/local/bin/skopeo /usr/local/bin/skopeo
 COPY --from=builder /app /app
 CMD node /app/index.js
