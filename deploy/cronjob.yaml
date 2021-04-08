@@ -5,6 +5,7 @@ metadata:
 spec:
   schedule: "@hourly"
   concurrencyPolicy: Replace
+  startingDeadlineSeconds: 360
   jobTemplate:
     spec:
       template:
