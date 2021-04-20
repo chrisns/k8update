@@ -14,7 +14,7 @@ jobs:
         uses: crazy-max/ghaction-docker-meta@v2.2.1
         with:
           images: |
-            docker.pkg.github.com/chrisns/k8update/k8update
+            ghcr.io/${{ github.repository }}
             ${{ github.repository }}
           tag-sha: true
           tag-latest: true
