@@ -13,7 +13,7 @@ jobs:
       - id: docker_meta
         uses: crazy-max/ghaction-docker-meta@v2.2.1
         with:
-          images: docker.pkg.github.com/chrisns/k8update/k8update/
+          images: docker.pkg.github.com/chrisns/k8update/k8update
           tag-sha: true
           tag-latest: true
           tag-semver: |
