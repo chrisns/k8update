@@ -13,5 +13,5 @@ spec:
           serviceAccountName: k8update
           containers:
           - name: k8update
-            image: chrisns/k8update
+            image: ghcr.io/chrisns/k8update
           restartPolicy: OnFailure
