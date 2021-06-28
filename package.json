@@ -9,7 +9,7 @@
   "author": "Chris Nesbitt-Smith",
   "license": "MIT",
   "dependencies": {
-    "@kubernetes/client-node": "^0.14.3",
+    "@kubernetes/client-node": "^0.15.0",
     "ws": "^7.5.0"
   },
   "devDependencies": {
