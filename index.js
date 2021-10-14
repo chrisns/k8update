@@ -13,8 +13,8 @@ CoreV1Api.listPodForAllNamespaces(null, null, null, labelselector).then(pods =>
     if (pod.status.phase !== 'Running') { return }
     pod.status.containerStatuses.map((container, i) => {
       const runningSHA = container.imageID.split('@').pop(-1)
-      const image = pod.spec.containers[i].image.split("@")[0]
-      const latestSHA = cache[image] ?? JSON.parse(execSync(`/usr/bin/skopeo inspect --tls-verify=false docker://${image}`).toString()).Digest
+      const image = pod.spec.containers[i].image.split('@')[0]
+      const latestSHA = cache[image] ? cache[image] : JSON.parse(execSync(`/usr/bin/skopeo inspect --tls-verify=false docker://${image}`).toString()).Digest
 
       cache[image] = latestSHA
       console.log(pod.metadata.name, container.name, runningSHA, latestSHA, (runningSHA === latestSHA) ? 'matched' : 'not matched')
