@@ -1,14 +1,7 @@
-FROM node:16.11.1-alpine as builder
+FROM node:16.11.1-alpine 
+RUN apk add --no-cache skopeo
 WORKDIR /app
-COPY package.json package-lock.json /app/
-RUN npm install
-COPY index.js .eslintrc.js ./
-RUN node_modules/.bin/eslint .
-RUN npm prune --production
-RUN rm .eslintrc.js
-
-
-FROM node:16.11.1-alpine
-COPY --from=twistedvines/skopeo /usr/local/bin/skopeo /usr/local/bin/skopeo
-COPY --from=builder /app /app
+COPY package.json package-lock.json ./
+RUN npm install --production
+COPY index.js ./
 CMD node /app/index.js
