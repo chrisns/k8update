@@ -1,4 +1,4 @@
-FROM node:17.3.0-alpine@sha256:4dd690ef859ceadc242e9901fb554ce0a97a9055f33b9cf4ea441acdbfe50a34 
+FROM node:17.3.1-alpine@sha256:b19e09b20ce0f7908913cb97f8071e9d47b21fcc6544758a81308536cd7709c0 
 RUN apk add --no-cache skopeo
 WORKDIR /app
 COPY package.json package-lock.json ./
