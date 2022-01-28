@@ -14,7 +14,7 @@
     "ws": "^8.4.0"
   },
   "devDependencies": {
-    "eslint": "8.7.0",
+    "eslint": "8.8.0",
     "eslint-config-standard": "15.0.1",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-node": "11.1.0",
